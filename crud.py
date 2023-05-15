@@ -1,6 +1,7 @@
 lista = []
+opcao = ''
 
-while True:
+while opcao != 'S':
 
     opcao = input("\n\t(C)adastrar\n\t(L)istar\n\t(P)rocurar\n\t(S)air\n\t>").upper()
 
@@ -15,8 +16,7 @@ while True:
 
     elif opcao == 'L':
         for info in lista:
-            print("Marca:\t", info["marca"], "\nPlaca:\t", info["placa"], "\nAno:\t", info["ano"], "\nModelo:\t", info["modelo"], "\n")
-
+           print("Marca:\t", info["marca"], "\nPlaca:\t", info["placa"], "\nAno:\t", info["ano"], "\nModelo:\t", info["modelo"], "\n")
     elif opcao == 'P':
         procurar_placa = input("Qual é a placa do seu carro? ")
         encontrado = False
@@ -34,6 +34,3 @@ while True:
                     info["modelo"] = input("Digite o modelo\n>")
             elif opcao2 == 'R':
                 break
-
-    elif opcao == 'S':
-        break
